@@ -2,7 +2,6 @@ import cv2
 
 face_mask = cv2.CascadeClassifier("cascade/cascade.xml")
 faceCascade = cv2.CascadeClassifier("haarcascade/haarcascade_frontalface_default.xml")
-noseCascade = cv2.CascadeClassifier("haarcascade/Nariz.xml")
 
 cap = cv2.VideoCapture(0)
 mask_on = False
@@ -31,7 +30,7 @@ while(True):
         
         )
               
-    face = face_mask.detectMultiScale(gray,1.1,4)
+    masker = face_mask.detectMultiScale(gray,1.1,4)
     for(x,y,w,h) in face:
         roi_gray = gray[y:y+h, x:x+w]
         roi_color=frame[y:y+h, x:x+w]
