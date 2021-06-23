@@ -40,7 +40,7 @@ while(True):
         cv2.putText(frame,'Masker',(x,y),1,1,(255,0,0),1),
         
     
-    if(len(face) == 0 ):
+    if(len(face) == 1 ):
         mask_on = True  
     else:
         mask_on = False
