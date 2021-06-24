@@ -31,7 +31,7 @@ while(True):
         )
               
     masker = face_mask.detectMultiScale(gray,1.1,4)
-    for(x,y,w,h) in face:
+    for(x,y,w,h) in wajah:
         roi_gray = gray[y:y+h, x:x+w]
         roi_color=frame[y:y+h, x:x+w]
         
